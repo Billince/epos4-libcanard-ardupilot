@@ -1,0 +1,6 @@
+../Core/Src/epos4.c:23:6:EPOS4_Init	9
+../Core/Src/epos4.c:90:6:EPOS4_SetTargetPosition	3
+../Core/Src/epos4.c:114:9:EPOS4_GetActualPosition	3
+../Core/Src/epos4.c:144:6:EPOS4_SendSDO	5
+../Core/Src/epos4.c:199:6:EPOS4_ReceiveSDO	3
+../Core/Src/epos4.c:228:6:EPOS4_ProcessRxMessage	4
