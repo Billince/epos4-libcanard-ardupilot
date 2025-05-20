@@ -1398,3 +1398,7 @@ USBH_StatusTypeDef USBH_LL_NotifyURBChange(USBH_HandleTypeDef *phost)
 /**
   * @}
   */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986

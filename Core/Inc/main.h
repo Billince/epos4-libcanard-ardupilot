@@ -54,12 +54,15 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+<<<<<<< HEAD
 // New continuous mode functions
 void set_up_continuous_mode(void);
 void handle_continuous_command(int16_t command_raw);
 void monitor_position_limits(void);
 void request_continuous_mode(void);
 
+=======
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

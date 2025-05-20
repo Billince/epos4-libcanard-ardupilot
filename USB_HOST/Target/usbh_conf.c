@@ -226,7 +226,11 @@ USBH_StatusTypeDef USBH_LL_Init(USBH_HandleTypeDef *phost)
 /**
   * @brief  De-Initialize the low level portion of the host driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @retval USBH Status
+=======
+  * @retval USBH status
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_StatusTypeDef USBH_LL_DeInit(USBH_HandleTypeDef *phost)
 {
@@ -243,7 +247,11 @@ USBH_StatusTypeDef USBH_LL_DeInit(USBH_HandleTypeDef *phost)
 /**
   * @brief  Start the low level portion of the host driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @retval USBH Status
+=======
+  * @retval USBH status
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_StatusTypeDef USBH_LL_Start(USBH_HandleTypeDef *phost)
 {
@@ -260,7 +268,11 @@ USBH_StatusTypeDef USBH_LL_Start(USBH_HandleTypeDef *phost)
 /**
   * @brief  Stop the low level portion of the host driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @retval USBH Status
+=======
+  * @retval USBH status
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_StatusTypeDef USBH_LL_Stop(USBH_HandleTypeDef *phost)
 {
@@ -277,7 +289,11 @@ USBH_StatusTypeDef USBH_LL_Stop(USBH_HandleTypeDef *phost)
 /**
   * @brief  Return the USB host speed from the low level driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @retval USBH Speeds
+=======
+  * @retval USBH speeds
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_SpeedTypeDef USBH_LL_GetSpeed(USBH_HandleTypeDef *phost)
 {
@@ -307,7 +323,11 @@ USBH_SpeedTypeDef USBH_LL_GetSpeed(USBH_HandleTypeDef *phost)
 /**
   * @brief  Reset the Host port of the low level driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @retval USBH Status
+=======
+  * @retval USBH status
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_StatusTypeDef USBH_LL_ResetPort(USBH_HandleTypeDef *phost)
 {
@@ -325,7 +345,11 @@ USBH_StatusTypeDef USBH_LL_ResetPort(USBH_HandleTypeDef *phost)
   * @brief  Return the last transferred packet size.
   * @param  phost: Host handle
   * @param  pipe: Pipe index
+<<<<<<< HEAD
   * @retval Packet Size
+=======
+  * @retval Packet size
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 uint32_t USBH_LL_GetLastXferSize(USBH_HandleTypeDef *phost, uint8_t pipe)
 {
@@ -335,6 +359,7 @@ uint32_t USBH_LL_GetLastXferSize(USBH_HandleTypeDef *phost, uint8_t pipe)
 /**
   * @brief  Open a pipe of the low level driver.
   * @param  phost: Host handle
+<<<<<<< HEAD
   * @param  pipe: Pipe index
   * @param  epnum: Endpoint Number
   * @param  dev_address: Device USB address
@@ -344,12 +369,28 @@ uint32_t USBH_LL_GetLastXferSize(USBH_HandleTypeDef *phost, uint8_t pipe)
   * @retval USBH Status
   */
 USBH_StatusTypeDef USBH_LL_OpenPipe(USBH_HandleTypeDef *phost, uint8_t pipe, uint8_t epnum,
+=======
+  * @param  pipe_num: Pipe index
+  * @param  epnum: Endpoint number
+  * @param  dev_address: Device USB address
+  * @param  speed: Device Speed
+  * @param  ep_type: Endpoint type
+  * @param  mps: Endpoint max packet size
+  * @retval USBH status
+  */
+USBH_StatusTypeDef USBH_LL_OpenPipe(USBH_HandleTypeDef *phost, uint8_t pipe_num, uint8_t epnum,
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
                                     uint8_t dev_address, uint8_t speed, uint8_t ep_type, uint16_t mps)
 {
   HAL_StatusTypeDef hal_status = HAL_OK;
   USBH_StatusTypeDef usb_status = USBH_OK;
 
+<<<<<<< HEAD
   hal_status = HAL_HCD_HC_Init(phost->pData, pipe, epnum, dev_address, speed, ep_type, mps);
+=======
+  hal_status = HAL_HCD_HC_Init(phost->pData, pipe_num, epnum,
+                               dev_address, speed, ep_type, mps);
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 
   usb_status = USBH_Get_USB_Status(hal_status);
 
@@ -360,7 +401,11 @@ USBH_StatusTypeDef USBH_LL_OpenPipe(USBH_HandleTypeDef *phost, uint8_t pipe, uin
   * @brief  Close a pipe of the low level driver.
   * @param  phost: Host handle
   * @param  pipe: Pipe index
+<<<<<<< HEAD
   * @retval USBH Status
+=======
+  * @retval USBH status
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   */
 USBH_StatusTypeDef USBH_LL_ClosePipe(USBH_HandleTypeDef *phost, uint8_t pipe)
 {
@@ -378,6 +423,7 @@ USBH_StatusTypeDef USBH_LL_ClosePipe(USBH_HandleTypeDef *phost, uint8_t pipe)
   * @brief  Submit a new URB to the low level driver.
   * @param  phost: Host handle
   * @param  pipe: Pipe index
+<<<<<<< HEAD
   *          This parameter can be a value from 1 to 15
   * @param  direction : Channel number
   *          This parameter can be one of these values:
@@ -397,20 +443,52 @@ USBH_StatusTypeDef USBH_LL_ClosePipe(USBH_HandleTypeDef *phost, uint8_t pipe)
   * @param  length : length of URB data
   * @param  do_ping : activate do ping protocol (for high speed only)
   *          This parameter can be one of these values:
+=======
+  *         This parameter can be a value from 1 to 15
+  * @param  direction : Channel number
+  *          This parameter can be one of the these values:
+  *           0 : Output
+  *           1 : Input
+  * @param  ep_type : Endpoint Type
+  *          This parameter can be one of the these values:
+  *            @arg EP_TYPE_CTRL: Control type
+  *            @arg EP_TYPE_ISOC: Isochrounous type
+  *            @arg EP_TYPE_BULK: Bulk type
+  *            @arg EP_TYPE_INTR: Interrupt type
+  * @param  token : Endpoint Type
+  *          This parameter can be one of the these values:
+  *            @arg 0: PID_SETUP
+  *            @arg 1: PID_DATA
+  * @param  pbuff : pointer to URB data
+  * @param  length : Length of URB data
+  * @param  do_ping : activate do ping protocol (for high speed only)
+  *          This parameter can be one of the these values:
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   *           0 : do ping inactive
   *           1 : do ping active
   * @retval Status
   */
 USBH_StatusTypeDef USBH_LL_SubmitURB(USBH_HandleTypeDef *phost, uint8_t pipe, uint8_t direction,
+<<<<<<< HEAD
                                     uint8_t ep_type, uint8_t token, uint8_t *pbuff, uint16_t length,
                                     uint8_t do_ping)
+=======
+                                     uint8_t ep_type, uint8_t token, uint8_t *pbuff, uint16_t length,
+                                     uint8_t do_ping)
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 {
   HAL_StatusTypeDef hal_status = HAL_OK;
   USBH_StatusTypeDef usb_status = USBH_OK;
 
+<<<<<<< HEAD
   hal_status = HAL_HCD_HC_SubmitRequest(phost->pData, pipe, direction ,ep_type,
                                        token, pbuff, length, do_ping);
 
+=======
+  hal_status = HAL_HCD_HC_SubmitRequest(phost->pData, pipe, direction ,
+                                        ep_type, token, pbuff, length,
+                                        do_ping);
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   usb_status =  USBH_Get_USB_Status(hal_status);
 
   return usb_status;
@@ -420,9 +498,15 @@ USBH_StatusTypeDef USBH_LL_SubmitURB(USBH_HandleTypeDef *phost, uint8_t pipe, ui
   * @brief  Get a URB state from the low level driver.
   * @param  phost: Host handle
   * @param  pipe: Pipe index
+<<<<<<< HEAD
   *          This parameter can be a value from 1 to 15
   * @retval URB state
   *          This parameter can be one of these values:
+=======
+  *         This parameter can be a value from 1 to 15
+  * @retval URB state
+  *          This parameter can be one of the these values:
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   *            @arg URB_IDLE
   *            @arg URB_DONE
   *            @arg URB_NOTREADY
@@ -439,13 +523,20 @@ USBH_URBStateTypeDef USBH_LL_GetURBState(USBH_HandleTypeDef *phost, uint8_t pipe
   * @brief  Drive VBUS.
   * @param  phost: Host handle
   * @param  state : VBUS state
+<<<<<<< HEAD
   *          This parameter can be one of these values:
   *           0 : VBUS Active
   *           1 : VBUS Inactive
+=======
+  *          This parameter can be one of the these values:
+  *           0 : VBUS Inactive
+  *           1 : VBUS Active
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   * @retval Status
   */
 USBH_StatusTypeDef USBH_LL_DriverVBUS(USBH_HandleTypeDef *phost, uint8_t state)
 {
+<<<<<<< HEAD
   /* USER CODE BEGIN 0 */
   if (phost->id == HOST_FS)
   {
@@ -467,6 +558,16 @@ USBH_StatusTypeDef USBH_LL_DriverVBUS(USBH_HandleTypeDef *phost, uint8_t state)
     }
   }
   /* USER CODE END 0*/
+=======
+  if (phost->id == HOST_FS) {
+    MX_DriverVbusFS(state);
+  }
+
+  /* USER CODE BEGIN 0 */
+
+  /* USER CODE END 0*/
+
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
   HAL_Delay(200);
   return USBH_OK;
 }
@@ -558,6 +659,9 @@ USBH_StatusTypeDef USBH_Get_USB_Status(HAL_StatusTypeDef hal_status)
   return usb_status;
 }
 
+<<<<<<< HEAD
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */ 
+=======
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986

@@ -64,8 +64,13 @@ all: main-build
 main-build: Newlibcanard_pixhawk.elf secondary-outputs
 
 # Tool invocations
+<<<<<<< HEAD
 Newlibcanard_pixhawk.elf Newlibcanard_pixhawk.map: $(OBJS) $(USER_OBJS) C:\Users\s319061\Downloads\epos4-libcanard-ardupilot-main\epos4-libcanard-ardupilot-main\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "Newlibcanard_pixhawk.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\s319061\Downloads\epos4-libcanard-ardupilot-main\epos4-libcanard-ardupilot-main\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Newlibcanard_pixhawk.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+=======
+Newlibcanard_pixhawk.elf Newlibcanard_pixhawk.map: $(OBJS) $(USER_OBJS) C:\Users\inceb\OneDrive\Documents\Newlibcanard_pixhawk\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Newlibcanard_pixhawk.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\inceb\OneDrive\Documents\Newlibcanard_pixhawk\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Newlibcanard_pixhawk.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 	@echo 'Finished building target: $@'
 	@echo ' '
 

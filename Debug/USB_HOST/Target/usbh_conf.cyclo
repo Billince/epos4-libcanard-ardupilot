@@ -14,6 +14,7 @@
 ../USB_HOST/Target/usbh_conf.c:312:20:USBH_LL_ResetPort	1
 ../USB_HOST/Target/usbh_conf.c:330:10:USBH_LL_GetLastXferSize	1
 ../USB_HOST/Target/usbh_conf.c:346:20:USBH_LL_OpenPipe	1
+<<<<<<< HEAD
 ../USB_HOST/Target/usbh_conf.c:365:20:USBH_LL_ClosePipe	1
 ../USB_HOST/Target/usbh_conf.c:404:20:USBH_LL_SubmitURB	1
 ../USB_HOST/Target/usbh_conf.c:433:22:USBH_LL_GetURBState	1
@@ -22,3 +23,13 @@
 ../USB_HOST/Target/usbh_conf.c:504:9:USBH_LL_GetToggle	2
 ../USB_HOST/Target/usbh_conf.c:526:6:USBH_Delay	1
 ../USB_HOST/Target/usbh_conf.c:536:20:USBH_Get_USB_Status	5
+=======
+../USB_HOST/Target/usbh_conf.c:366:20:USBH_LL_ClosePipe	1
+../USB_HOST/Target/usbh_conf.c:405:20:USBH_LL_SubmitURB	1
+../USB_HOST/Target/usbh_conf.c:434:22:USBH_LL_GetURBState	1
+../USB_HOST/Target/usbh_conf.c:448:20:USBH_LL_DriverVBUS	2
+../USB_HOST/Target/usbh_conf.c:469:20:USBH_LL_SetToggle	2
+../USB_HOST/Target/usbh_conf.c:492:9:USBH_LL_GetToggle	2
+../USB_HOST/Target/usbh_conf.c:514:6:USBH_Delay	1
+../USB_HOST/Target/usbh_conf.c:524:20:USBH_Get_USB_Status	5
+>>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
