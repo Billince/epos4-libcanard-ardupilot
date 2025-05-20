@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "optional": "c",
+        "system_error": "c",
+        "algorithm": "c",
+        "type_traits": "c",
+        "xtr1common": "c",
+        "xutility": "c"
+    }
+}
