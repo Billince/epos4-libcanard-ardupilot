@@ -247,8 +247,4 @@ void EPOS4_ProcessRxMessage(CAN_HandleTypeDef *hcan, CAN_RxHeaderTypeDef *rxHead
             sdo_response_received = true;
         }
     }
-<<<<<<< HEAD
 }
-=======
-} 
->>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986

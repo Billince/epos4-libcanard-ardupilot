@@ -116,7 +116,6 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
     /* USER CODE END CAN1_MspInit 1 */
 
   }
-<<<<<<< HEAD
   else if(hcan->Instance==CAN2)
   {
     /* USER CODE BEGIN CAN2_MspInit 0 */
@@ -148,9 +147,6 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
     printf("HAL_CAN_MspInit: CAN2 initialization complete\n");
     /* USER CODE END CAN2_MspInit 1 */
   }
-=======
-
->>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 }
 
 /**
@@ -181,7 +177,6 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan)
 
     /* USER CODE END CAN1_MspDeInit 1 */
   }
-<<<<<<< HEAD
   else if(hcan->Instance==CAN2)
   {
     /* USER CODE BEGIN CAN2_MspDeInit 0 */
@@ -204,9 +199,6 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan)
 
     /* USER CODE END CAN2_MspDeInit 1 */
   }
-=======
-
->>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
 }
 
 /**

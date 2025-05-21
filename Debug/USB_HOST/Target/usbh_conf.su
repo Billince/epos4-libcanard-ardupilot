@@ -14,22 +14,11 @@
 ../USB_HOST/Target/usbh_conf.c:312:20:USBH_LL_ResetPort	24	static
 ../USB_HOST/Target/usbh_conf.c:330:10:USBH_LL_GetLastXferSize	16	static
 ../USB_HOST/Target/usbh_conf.c:346:20:USBH_LL_OpenPipe	48	static
-<<<<<<< HEAD
-../USB_HOST/Target/usbh_conf.c:365:20:USBH_LL_ClosePipe	24	static
-../USB_HOST/Target/usbh_conf.c:404:20:USBH_LL_SubmitURB	48	static
-../USB_HOST/Target/usbh_conf.c:433:22:USBH_LL_GetURBState	16	static
-../USB_HOST/Target/usbh_conf.c:447:20:USBH_LL_DriverVBUS	16	static
-../USB_HOST/Target/usbh_conf.c:481:20:USBH_LL_SetToggle	24	static
-../USB_HOST/Target/usbh_conf.c:504:9:USBH_LL_GetToggle	24	static
-../USB_HOST/Target/usbh_conf.c:526:6:USBH_Delay	16	static
-../USB_HOST/Target/usbh_conf.c:536:20:USBH_Get_USB_Status	24	static
-=======
 ../USB_HOST/Target/usbh_conf.c:366:20:USBH_LL_ClosePipe	24	static
-../USB_HOST/Target/usbh_conf.c:405:20:USBH_LL_SubmitURB	48	static
-../USB_HOST/Target/usbh_conf.c:434:22:USBH_LL_GetURBState	16	static
-../USB_HOST/Target/usbh_conf.c:448:20:USBH_LL_DriverVBUS	16	static
-../USB_HOST/Target/usbh_conf.c:469:20:USBH_LL_SetToggle	24	static
-../USB_HOST/Target/usbh_conf.c:492:9:USBH_LL_GetToggle	24	static
-../USB_HOST/Target/usbh_conf.c:514:6:USBH_Delay	16	static
-../USB_HOST/Target/usbh_conf.c:524:20:USBH_Get_USB_Status	24	static
->>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
+../USB_HOST/Target/usbh_conf.c:390:20:USBH_LL_SubmitURB	48	static
+../USB_HOST/Target/usbh_conf.c:412:22:USBH_LL_GetURBState	16	static
+../USB_HOST/Target/usbh_conf.c:423:20:USBH_LL_DriverVBUS	16	static
+../USB_HOST/Target/usbh_conf.c:453:20:USBH_LL_SetToggle	24	static
+../USB_HOST/Target/usbh_conf.c:476:9:USBH_LL_GetToggle	24	static
+../USB_HOST/Target/usbh_conf.c:498:6:USBH_Delay	16	static
+../USB_HOST/Target/usbh_conf.c:508:20:USBH_Get_USB_Status	24	static

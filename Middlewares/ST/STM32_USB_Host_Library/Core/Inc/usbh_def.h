@@ -212,20 +212,18 @@ extern "C" {
 typedef union
 {
   uint16_t w;
-  struct BW
+  struct
   {
-    uint8_t msb;
     uint8_t lsb;
-  }
-  bw;
-}
-uint16_t_uint8_t;
+    uint8_t msb;
+  } bw;
+} uint16_t_uint8_t;
 
 
 typedef union _USB_Setup
 {
   uint32_t d8[2];
-
+  
   struct _SetupPkt_Struc
   {
     uint8_t           bmRequestType;
@@ -234,8 +232,7 @@ typedef union _USB_Setup
     uint16_t_uint8_t  wIndex;
     uint16_t_uint8_t  wLength;
   } b;
-}
-USB_Setup_TypeDef;
+} USB_Setup_TypeDef;
 
 typedef  struct  _DescHeader
 {

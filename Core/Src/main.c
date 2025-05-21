@@ -229,9 +229,9 @@ static inline param_t * getParamByIndex(uint16_t index);
 static inline param_t * getParamByName(const char * name);
 
 // Make position variables global
-static int32_t maxPosition = 370000;           // Reduced maximum position
+static int32_t maxPosition = 270000;           // Reduced maximum position
 static int32_t midPosition = -270000;                // Middle position
-static int32_t minPosition = -180000;          // Reduced minimum position
+static int32_t minPosition = -280000;          // Reduced minimum position
 static int32_t targetPosition = 0;             // Start at middle position
 static uint8_t positionIndex = 1;              // Start at middle position
 
@@ -3021,9 +3021,9 @@ void handleActuatorArrayCommand(CanardInstance* ins, CanardRxTransfer* transfer)
             // Optimize motion parameters based on command delta and mode
             if (abs(command_value - 15360) < 1000) {
                 // Vectored yaw mode - maximum responsiveness
-                profile_velocity = 200000;     // Extreme velocity for yaw movements
-                profile_acceleration = 200000; // Extreme acceleration for instant response
-                profile_deceleration = 200000; // Matching deceleration
+                profile_velocity = 100000;     // Extreme velocity for yaw movements
+                profile_acceleration = 100000; // Extreme acceleration for instant response
+                profile_deceleration = 100000; // Matching deceleration
                 printf("Using MAXIMUM RESPONSE profile for vectored yaw control\n");
                 
                 // If it's a very small change, make sure we don't skip it
@@ -3033,21 +3033,21 @@ void handleActuatorArrayCommand(CanardInstance* ins, CanardRxTransfer* transfer)
             }
             else if (command_delta <= 20) {
                 // Very small adjustment - use highest velocity
-                profile_velocity = 20000;     // Maximum velocity for smallest moves
-                profile_acceleration = 20000; // Higher acceleration for instant response
-                profile_deceleration = 20000; // Matching deceleration
+                profile_velocity = 10000;     // Maximum velocity for smallest moves
+                profile_acceleration = 10000; // Higher acceleration for instant response
+                profile_deceleration = 10000; // Matching deceleration
                 printf("Using max speed profile for tiny adjustment\n");
             }
             else if (command_delta <= 100) {
                 // Small to medium adjustment - high performance profile
-                profile_velocity = 100000;
-                profile_acceleration = 100000;
-                profile_deceleration = 100000;
+                profile_velocity = 10000;
+                profile_acceleration = 10000;
+                profile_deceleration = 10000;
                 printf("Using high-speed profile for small adjustment\n");
             }
             else {
                 // Large movement - balanced profile
-                profile_velocity = 50000;
+                profile_velocity = 10000;
                 profile_acceleration = 10000;
                 profile_deceleration = 10000;
                 printf("Using balanced profile for larger movement\n");

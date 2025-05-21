@@ -62,8 +62,4 @@ bool EPOS4_Init_Legacy(CAN_HandleTypeDef* hcan, uint8_t node_id);
 }
 #endif
 
-<<<<<<< HEAD
-#endif /* __EPOS4_H */ 
-=======
-#endif /* __EPOS4_H */ 
->>>>>>> 78e9d6b53c4725235187a1d5d9e888d566978986
+#endif /* __EPOS4_H */
